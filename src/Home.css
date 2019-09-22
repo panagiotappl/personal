@@ -8,20 +8,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+a.navigation-button {
+  display: inline-block;
+  cursor: pointer;
   font-size: calc(10px + 2vmin);
+
+  background-color: transparent;
   color: grey;
+
+  padding: 1em;
 }
 
-.navigation-button {
-    display: inline-block;
-    cursor: pointer;
-
-    background-color: transparent;
-    color: dark-grey;
-
-    padding: 1em;
-}
-
-.navigation-button:hover {
-    color: black;
+a.navigation-button:hover {
+  color: black;
 }

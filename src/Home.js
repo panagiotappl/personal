@@ -1,16 +1,17 @@
-import React from "react";
-import { Transition } from "semantic-ui-react";
-import "./Home.css";
+import React from 'react';
+import { Transition } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import './Home.css';
 
 export default function Home() {
   return (
     <div className="home">
       <header className="home-title">
         <Transition transitionOnMount duration={2000}>
-            <div className="navigation-button">Projects</div>
+          <Link to="/projects" className="navigation-button">Projects</Link>
         </Transition>
         <Transition transitionOnMount duration={2000}>
-            <div className="navigation-button">Travels</div>
+          <Link to="/travels" className="navigation-button">Travels</Link>
         </Transition>
       </header>
     </div>
