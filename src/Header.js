@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 
 export default function Header() {
+  const path = window.location.pathname;
+  console.warn(path);
   return (
     <div className="nav-header">
       <Transition transitionOnMount duration={2000}>
@@ -13,17 +15,32 @@ export default function Header() {
       </Transition>
       <div className="nav-links">
         <Transition transitionOnMount duration={2000}>
-          <Link to="/projects" className="nav-header-item">
+          <Link
+            to="/projects"
+            className={
+              'nav-header-item' + (path === '/projects' ? ' selected' : '')
+            }
+          >
             Projects
           </Link>
         </Transition>
         <Transition transitionOnMount duration={2000}>
-          <Link to="/travels" className="nav-header-item">
+          <Link
+            to="/travels"
+            className={
+              'nav-header-item' + (path.startsWith('/travels') ? ' selected' : '')
+            }
+          >
             Travels
           </Link>
         </Transition>
         <Transition transitionOnMount duration={2000}>
-          <Link to="/about" className="nav-header-item">
+          <Link
+            to="/about"
+            className={
+              'nav-header-item' + (path === '/about' ? ' selected' : '')
+            }
+          >
             About
           </Link>
         </Transition>

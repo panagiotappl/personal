@@ -1,0 +1,28 @@
+.travels-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 65vh;
+}
+
+.focused-container {
+  display: flex;
+  align-items: flex-end;
+}
+
+.travels-item {
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  color: grey;
+  padding: 2em;
+  font-size: 24px;
+}
+
+.travels-item:hover {
+  color: black;
+}
+
+.focused-country {
+  font-size: 30px;
+}

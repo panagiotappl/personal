@@ -19,6 +19,14 @@
   color: black;
 }
 
+.nav-header-item.selected {
+  color: #f98ac5;
+}
+
+.nav-header-item.selected:hover {
+  color: #b75d8d;
+}
+
 .nav-links {
   display: flex;
 }

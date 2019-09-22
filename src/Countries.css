@@ -1,0 +1,23 @@
+.country-container {
+  padding: 2em;
+}
+
+.country-title {
+  font-size: 38px;
+  color: grey;
+}
+
+.close-column {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-icon {
+  font-size: 28px;
+  color: grey;
+  cursor: pointer;
+}
+
+.close-icon:hover {
+  color: black;
+}
