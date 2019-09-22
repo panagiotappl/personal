@@ -13,6 +13,9 @@ export default function Home() {
         <Transition transitionOnMount duration={2000}>
           <Link to="/travels" className="navigation-button">Travels</Link>
         </Transition>
+        <Transition transitionOnMount duration={2000}>
+          <Link to="/about" className="navigation-button">About</Link>
+        </Transition>
       </header>
     </div>
   );

@@ -1,5 +1,11 @@
 import React from 'react';
+import Header from './Header';
 
 export default function Travels() {
-  return <div>My travels</div>;
+  return (
+    <>
+      <Header />
+      <div></div>
+    </>
+  );
 }

@@ -1,0 +1,9 @@
+.under-construction {
+  background-color: white;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: grey;
+  flex-direction: column;
+}
