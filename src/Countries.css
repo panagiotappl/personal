@@ -1,5 +1,5 @@
 .country-container {
-  padding: 2em;
+  padding: 2em 5em;
 }
 
 .country-title {
@@ -50,5 +50,9 @@
 @media only screen and (max-width: 600px) {
   .text {
     font-size: 14px;
+  }
+
+  .country-container {
+    padding: 2em 1.5em;
   }
 }
