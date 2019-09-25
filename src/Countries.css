@@ -47,6 +47,22 @@
   color: grey;
 }
 
+.info-column {
+  text-align: right;
+}
+
+.info-column-day {
+  font-size: 18px;
+  color: #f98ac5;
+  padding-bottom: 5px;
+}
+
+.info-column-text {
+  font-size: 20px;
+  color: grey;
+  padding-bottom: 20px;
+}
+
 @media only screen and (max-width: 600px) {
   .text {
     font-size: 14px;
