@@ -100,7 +100,7 @@ export function Japan() {
               info="The East Gardens of The Imperial Palace & Meiji Jingu & Tokyo Metropolitan & Shibuya Crossing"
             />
             <InfoItem day="Day 5" info="Hakone & Traditional Japanese dinner" />
-            <InfoItem day="Day 6 & Day 7" info="Takayama" />
+            <InfoItem day="Day 6 & Day 7" info="JR Hida limited express train & Takayama" />
             <InfoItem day="Day 8 & Day 9" info="Shiragawa-go & Kanazawa" />
             <InfoItem
               day="Day 10"
