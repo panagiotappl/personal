@@ -1,4 +1,5 @@
 import React from 'react';
+import shortid from 'shortid';
 import { Image } from 'semantic-ui-react';
 import Airplane from './images/japan/day1/airplane.JPEG';
 import AirplaneFood from './images/japan/day1/airplane_food.JPEG';
@@ -16,16 +17,22 @@ import Gundam2 from './images/japan/day1/gundam2.JPEG';
 
 export const day1 = [
   {
-    key: 1,
-    columnCount: 2,
+    key: shortid.generate(),
+    columnCount: 1,
     columns: [
       {
-        key: 2,
+        key: shortid.generate(),
         type: 'image',
         content: Airplane,
       },
+    ],
+  },
+  {
+    key: shortid.generate(),
+    columnCount: 1,
+    columns: [
       {
-        key: 3,
+        key: shortid.generate(),
         type: 'text',
         content: (
           <>
@@ -59,16 +66,22 @@ export const day1 = [
     ],
   },
   {
-    key: 4,
-    columnCount: 2,
+    key: shortid.generate(),
+    columnCount: 1,
     columns: [
       {
-        key: 5,
+        key: shortid.generate(),
         type: 'image',
         content: AirplaneFood,
       },
+    ],
+  },
+  {
+    key: shortid.generate(),
+    columnCount: 1,
+    columns: [
       {
-        key: 6,
+        key: shortid.generate(),
         type: 'text',
         content: (
           <>
@@ -90,21 +103,27 @@ export const day1 = [
     ],
   },
   {
-    key: 7,
-    columnCount: 3,
+    key: shortid.generate(),
+    columnCount: 2,
     columns: [
       {
-        key: 8,
+        key: shortid.generate(),
         type: 'image',
         content: Vending1,
       },
       {
-        key: 9,
+        key: shortid.generate(),
         type: 'image',
         content: Vending2,
       },
+    ],
+  },
+  {
+    key: shortid.generate(),
+    columnCount: 1,
+    columns: [
       {
-        key: 10,
+        key: shortid.generate(),
         type: 'text',
         content: (
           <>
@@ -125,16 +144,22 @@ export const day1 = [
     ],
   },
   {
-    key: 11,
-    columnCount: 2,
+    key: shortid.generate(),
+    columnCount: 1,
     columns: [
       {
-        key: 13,
+        key: shortid.generate(),
         type: 'image',
         content: Asakusabashi,
-      },
+      }
+     ],} ,
+  {
+    key: shortid.generate(),
+    columnCount: 1,
+    columns: [
+      
       {
-        key: 13,
+        key: shortid.generate(),
         type: 'text',
         content: (
           <>
@@ -170,16 +195,22 @@ export const day1 = [
     ],
   },
   {
-    key: 14,
-    columnCount: 2,
+    key: shortid.generate(),
+    columnCount: 1,
     columns: [
       {
-        key: 15,
+        key: shortid.generate(),
         type: 'image',
         content: AkiBuild3,
       },
+    ],
+  },
+  {
+    key: shortid.generate(),
+    columnCount: 1,
+    columns: [
       {
-        key: 16,
+        key: shortid.generate(),
         type: 'text',
         content: (
           <>
@@ -221,42 +252,42 @@ export const day1 = [
     ],
   },
   {
-    key: 17,
+    key: shortid.generate(),
     columnCount: 2,
     columns: [
       {
-        key: 18,
+        key: shortid.generate(),
         type: 'image',
         content: AkiArc1,
       },
       {
-        key: 19,
+        key: shortid.generate(),
         type: 'image',
         content: AkiArc3,
       },
     ],
   },
   {
-    key: 20,
+    key: shortid.generate(),
     columnCount: 4,
     columns: [
       {
-        key: 21,
+        key: shortid.generate(),
         type: 'image',
         content: AkiArc2,
       },
       {
-        key: 22,
+        key: shortid.generate(),
         type: 'image',
         content: AkiArc4,
       },
       {
-        key: 24,
+        key: shortid.generate(),
         type: 'image',
         content: Gundam,
       },
       {
-        key: 25,
+        key: shortid.generate(),
         type: 'image',
         content: Gundam2,
       },

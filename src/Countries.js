@@ -20,10 +20,29 @@ function renderColumn({ type, content, key }) {
   }
 }
 
+function InformationGrid() {
+  return (
+    <Grid stackable>
+      <Grid.Row className="day-title">Day 1</Grid.Row>
+      <Grid.Row className="day-subtitle">
+        Flight to Narita airport & Asakusabashi & Akihabara
+      </Grid.Row>
+      {day1.map(row => {
+        return (
+          <Grid.Row key={row.key} columns={row.columnCount}>
+            {row.columns.map(column => {
+              return renderColumn(column);
+            })}
+          </Grid.Row>
+        );
+      })}
+    </Grid>
+  );
+}
 export function Japan() {
   return (
     <div className="country-container">
-      <Grid>
+      <Grid stackable>
         <Grid.Row columns={2}>
           <Grid.Column>
             <div className="country-title">Japan</div>
@@ -36,23 +55,16 @@ export function Japan() {
             </div>
           </Grid.Column>
         </Grid.Row>
-
         <Grid.Row className="dates">19 Apr - 5 May</Grid.Row>
-        <Grid.Row className="day-title">Day 1</Grid.Row>
-        <Grid.Row className="day-subtitle">
-          Flight to Narita airport & Asakusabashi & Akihabara
-        </Grid.Row>
-      </Grid>
-      <Grid stackable>
-        {day1.map(row => {
-          return (
-            <Grid.Row key={row.key} columns={row.columnCount}>
-              {row.columns.map(column => {
-                return renderColumn(column);
-              })}
-            </Grid.Row>
-          );
-        })}
+        <Grid.Row columns={2}>
+        <Grid.Column>
+          <InformationGrid />
+
+        </Grid.Column>
+        <Grid.Column>
+
+        </Grid.Column>
+          </Grid.Row>
       </Grid>
     </div>
   );
