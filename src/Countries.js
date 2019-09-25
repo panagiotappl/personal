@@ -23,10 +23,14 @@ function renderColumn({ type, content, key }) {
 function InformationGrid() {
   return (
     <Grid stackable>
-     
+     <Grid.Row className="dates">19 Apr - 5 May</Grid.Row>
+        <Grid.Row className="day-title">Day 1</Grid.Row>
+        <Grid.Row className="day-subtitle">
+          Flight to Narita airport & Asakusabashi & Akihabara
+        </Grid.Row>
       {day1.map(row => {
         return (
-          <Grid.Row key={row.key} columns={row.columnCount}>
+          <Grid.Row key={row.key} columns={row.columnCount} >
             {row.columns.map(column => {
               return renderColumn(column);
             })}
@@ -61,12 +65,10 @@ export function Japan() {
             </div>
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row className="dates">19 Apr - 5 May</Grid.Row>
-        <Grid.Row className="day-title">Day 1</Grid.Row>
-        <Grid.Row className="day-subtitle">
-          Flight to Narita airport & Asakusabashi & Akihabara
-        </Grid.Row>
-        <Grid.Row columns={2}>
+        
+        </Grid>
+        <Grid reversed='mobile' stackable>
+        <Grid.Row columns={2} >
           <Grid.Column>
             <InformationGrid />
           </Grid.Column>
@@ -77,13 +79,13 @@ export function Japan() {
             <InfoItem day='Day 4' info='The East Gardens of The Imperial Palace & Meiji Jingu & Tokyo Metropolitan & Shibuya Crossing'/>
             <InfoItem day='Day 5' info='Hakone & Traditional Japanese dinner'/>
             <InfoItem day='Day 6 & Day 7' info='Takayama'/>
-            <InfoItem day='Day 8 & Day 9 & Day 10' info='Shiragawa-go & Kanazawa'/>
-            <InfoItem day='Day 11' info='Tenryu-ji Temple & Arashiyama forest'/>
-            <InfoItem day='Day 12' info='Kinkaku-ji & Kyoto Districts & Kiyomizu-dera'/>
-            <InfoItem day='Day 13' info='Fushimi Inari & Drink at bar in Kyoto'/>
-            <InfoItem day='Day 14' info='Trip to Koyasan & Meditation with monks & Tour in Koyasan semetary'/>
-            <InfoItem day='Day 15' info='Morning Bhudist rituals & Trip back to Tokyo'/>
-            <InfoItem day='Day 16' info='Akihabara & Hair Saloon &  Takeshita Street & Nakano'/>
+            <InfoItem day='Day 8 & Day 9' info='Shiragawa-go & Kanazawa'/>
+            <InfoItem day='Day 10' info='Tenryu-ji Temple & Arashiyama forest'/>
+            <InfoItem day='Day 11' info='Kinkaku-ji & Kyoto Districts & Kiyomizu-dera'/>
+            <InfoItem day='Day 12' info='Fushimi Inari & Drink at bar in Kyoto'/>
+            <InfoItem day='Day 13' info='Trip to Koyasan & Meditation with monks & Tour in Koyasan semetary'/>
+            <InfoItem day='Day 14' info='Morning Bhudist rituals & Trip back to Tokyo'/>
+            <InfoItem day='Day 15' info='Akihabara & Hair Saloon &  Takeshita Street & Nakano'/>
           </Grid.Column>
         </Grid.Row>
       </Grid>
