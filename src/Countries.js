@@ -48,7 +48,7 @@ function InfoItem({ day, info }) {
 export function Japan() {
   return (
     <div className="country-container">
-      <Grid stackable>
+      <Grid>
         <Grid.Row columns={2}>
           <Grid.Column>
             <div className="country-title">Japan</div>
