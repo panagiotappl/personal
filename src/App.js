@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import Header from './Header';
 import Travels from './Travels';
-import { Japan } from './Countries';
+import {Japan} from './Countries';
 import UnderContrustction from './UnderConstruction';
+
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/travels/:path" component={Header} />
       </Switch>
       <Switch>
+
         <Route exact path="/" component={Home} />
         <Route exact path="/travels" component={Travels} />
         <Route exact path="/travels/japan" component={Japan} />
