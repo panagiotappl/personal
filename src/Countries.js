@@ -1,7 +1,6 @@
-import React from 'react';
-import { Grid, Image, Breadcrumb } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
-import { day1 } from './days';
+import React, { createRef } from 'react';
+import { Grid, Image, Ref, Sticky } from 'semantic-ui-react';
+import { day1, day2 } from './days';
 import MyBreadcrumbs from './Breadcrumbs';
 import './Countries.css';
 
@@ -21,10 +20,10 @@ function renderColumn({ type, content, key }) {
   }
 }
 
-function InformationGrid() {
+function InformationGrid({ day }) {
   return (
     <Grid stackable>
-      {day1.map(row => {
+      {day.map(row => {
         return (
           <Grid.Row key={row.key} columns={row.columnCount}>
             {row.columns.map(column => {
@@ -47,6 +46,9 @@ function InfoItem({ day, info }) {
 }
 
 export function Japan(props) {
+  const contextRef = createRef();
+  const contextRef2 = createRef();
+
   return (
     <div className="country-container">
       <Grid container>
@@ -64,16 +66,33 @@ export function Japan(props) {
       <Grid container stackable>
         <Grid.Row columns={2}>
           <Grid.Column>
-            <div className="day-title">Day 1</div>
-            <div className="day-subtitle">
-              Flight to Narita airport & Asakusabashi & Akihabara
-            </div>
+            <Sticky context={contextRef}>
+              <div className="day">
+                <div className="day-title">Day 1</div>
+                <div className="day-subtitle">
+                  Flight to Narita airport & Asakusabashi & Akihabara
+                </div>
+              </div>
+            </Sticky>
           </Grid.Column>
           <Grid.Column></Grid.Column>
         </Grid.Row>
         <Grid.Row columns={2}>
           <Grid.Column>
-            <InformationGrid />
+            <Ref innerRef={contextRef}>
+              <InformationGrid day={day1} />
+            </Ref>
+            <Sticky context={contextRef2}>
+              <div className="day">
+                <div className="day-title">Day 2</div>
+                <div className="day-subtitle">
+                  Yoyogi park & Harajuku & Samurai Musem & Shinjuku & Senso-ji Temple
+                </div>
+              </div>
+            </Sticky>
+            <Ref innerRef={contextRef2}>
+              <InformationGrid day={day2} />
+            </Ref>
           </Grid.Column>
           <Grid.Column className="info-column">
             <InfoItem
@@ -124,6 +143,7 @@ export function Japan(props) {
             />
           </Grid.Column>
         </Grid.Row>
+        <Grid.Row></Grid.Row>
       </Grid>
     </div>
   );

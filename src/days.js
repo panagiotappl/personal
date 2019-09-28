@@ -15,6 +15,28 @@ import AkiArc4 from './images/japan/day1/akiarc4.JPEG';
 import Gundam from './images/japan/day1/gundam.JPEG';
 import Gundam2 from './images/japan/day1/gundam2.JPEG';
 
+import Station from './images/japan/day2/station.JPEG';
+import Breakfast from './images/japan/day2/breakfast.JPEG';
+
+export const day2 = [
+  {
+    key: shortid.generate(),
+    columnCount: 2,
+    columns: [
+      {
+        key: shortid.generate(),
+        type: 'image',
+        content: Station
+      },
+      {
+        key: shortid.generate(),
+        type: 'image',
+        content: Breakfast
+      }
+    ]
+  }
+]
+
 export const day1 = [
   {
     key: shortid.generate(),
@@ -269,7 +291,7 @@ export const day1 = [
   },
   {
     key: shortid.generate(),
-    columnCount: 4,
+    columnCount: 2,
     columns: [
       {
         key: shortid.generate(),
@@ -280,7 +302,13 @@ export const day1 = [
         key: shortid.generate(),
         type: 'image',
         content: AkiArc4,
-      },
+      }
+    ],
+  },
+  {
+    key: shortid.generate(),
+    columnCount: 2,
+    columns: [
       {
         key: shortid.generate(),
         type: 'image',

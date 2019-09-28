@@ -14,9 +14,13 @@
   padding-top: 0.5rem !important;
 }
 
+.day {
+  background-color: #fff2f2;
+  padding: 1em 0.5em;
+}
+
 .day-title{
   font-size: 26px;
-  /* padding-left: 1rem !important; */
   padding-bottom: 0.5rem !important;
   color: #f98ac5;
 }
@@ -35,12 +39,15 @@
 
 .info-column {
   text-align: right;
+  height: 100vh !important;
+
 }
 
 .info-column-day {
   font-size: 18px;
   color: #f98ac5;
   padding-bottom: 5px;
+
 }
 
 .info-column-text {
