@@ -36,19 +36,16 @@ function InformationGrid({ day }) {
   );
 }
 
-function InfoItem({ day, info }) {
-  return (
-    <div>
-      <div className="info-column-day">{day}</div>
-      <div className="info-column-text"> {info}</div>
-    </div>
-  );
-}
-
+// function InfoItem({ day, info }) {
+//   return (
+//     <div>
+//       <div className="info-column-day">{day}</div>
+//       <div className="info-column-text"> {info}</div>
+//     </div>
+//   );
+// }
 export function Japan(props) {
-  const contextRef = createRef();
-  const contextRef2 = createRef();
-
+  // const contextRef = createRef();
   return (
     <div className="country-container">
       <Grid container>
@@ -65,37 +62,26 @@ export function Japan(props) {
       </Grid>
       <Grid container stackable>
         <Grid.Row columns={2}>
-          <Grid.Column>
-            <Sticky context={contextRef}>
+          <Grid.Column width={12}>
+            {/* <Sticky context={contextRef}> */}
               <div className="day">
                 <div className="day-title">Day 1</div>
                 <div className="day-subtitle">
                   Flight to Narita airport & Asakusabashi & Akihabara
                 </div>
               </div>
-            </Sticky>
+            {/* </Sticky> */}
           </Grid.Column>
-          <Grid.Column></Grid.Column>
+          <Grid.Column width={4}></Grid.Column>
         </Grid.Row>
         <Grid.Row columns={2}>
-          <Grid.Column>
-            <Ref innerRef={contextRef}>
+          <Grid.Column width={12}>
+            {/* <Ref innerRef={contextRef}> */}
               <InformationGrid day={day1} />
-            </Ref>
-            <Sticky context={contextRef2}>
-              <div className="day">
-                <div className="day-title">Day 2</div>
-                <div className="day-subtitle">
-                  Yoyogi park & Harajuku & Samurai Musem & Shinjuku & Senso-ji Temple
-                </div>
-              </div>
-            </Sticky>
-            <Ref innerRef={contextRef2}>
-              <InformationGrid day={day2} />
-            </Ref>
+            {/* </Ref> */}
           </Grid.Column>
-          <Grid.Column className="info-column">
-            <InfoItem
+          <Grid.Column className="info-column" width={4}>
+            {/* <InfoItem
               day="Day 1"
               info="Flight to Narita airport & Asakusabashi & Akihabara"
             />
@@ -140,10 +126,30 @@ export function Japan(props) {
             <InfoItem
               day="Day 15"
               info="Akihabara & Hair Saloon &  Takeshita Street & Nakano"
-            />
+            /> */}
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row></Grid.Row>
+        <Grid.Row columns={2}>
+          <Grid.Column width={12}>
+            {/* <Sticky context={contextRef2}> */}
+              <div className="day">
+                <div className="day-title">Day 2</div>
+                <div className="day-subtitle">
+                  Yoyogi park & Harajuku & Samurai Musem & Shinjuku & Senso-ji
+                  Temple
+                </div>
+              </div>
+            {/* </Sticky> */}
+          </Grid.Column>
+          <Grid.Column width={4}></Grid.Column>
+        </Grid.Row>
+        <Grid.Row columns={2}>
+          <Grid.Column width={12}>
+            {/* <Ref innerRef={contextRef2}> */}
+              <InformationGrid day={day2} />
+            {/* </Ref> */}
+          </Grid.Column>
+        </Grid.Row>
       </Grid>
     </div>
   );

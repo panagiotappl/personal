@@ -30,3 +30,27 @@
 .nav-links {
   display: flex;
 }
+
+.mobile-nav {
+  display: flex;
+  justify-content: flex-end;
+  /* //flex-direction: column; */
+}
+
+.mobile-button {
+  margin: 20px 20px 5px !important;
+  background-color: transparent !important;
+}
+
+.mobile-menu {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.menu-button {
+  background-color: transparent !important;
+}
+
+.menu-button-a {
+  color: grey !important;
+}

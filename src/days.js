@@ -21,21 +21,79 @@ import Breakfast from './images/japan/day2/breakfast.JPEG';
 export const day2 = [
   {
     key: shortid.generate(),
-    columnCount: 2,
+    columnCount: 1,
     columns: [
       {
         key: shortid.generate(),
         type: 'image',
-        content: Station
+        content: Breakfast,
       },
+    ],
+  },
+  {
+    key: shortid.generate(),
+    columnCount: 1,
+    columns: [
+      {
+        key: shortid.generate(),
+        type: 'text',
+        content: (
+          <>
+            <p>After a 10 hour sleep we woke up very early in the morning.</p>
+            <p>
+              We looked around the Asakusabashi station area for a nice place to
+              have breakfast and we found hidden on the second floor of a very
+              narrow building a cafe called <strong>Komeda's coffee.</strong>
+            </p>
+            <p>
+              Komeda's coffee is a cafe chain in Japan that was honestly one of
+              the friendliest and cosiest places we went during our journey. The
+              waiters and staff very friendly and the place was calm and quiet.
+              Whenever you were ready to order all you had to do was ring a
+              small bell that was placed on top of your table. The menu offered
+              a breakfast option of toasted bread with either beaten eggs or red
+              bean paste (a very common japanese cuisine ingredient for sweets).
+              To top that we also ordered the plate shown in the picture above.
+            </p>
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    key: shortid.generate(),
+    columnCount: 1,
+    columns: [
       {
         key: shortid.generate(),
         type: 'image',
-        content: Breakfast
-      }
-    ]
-  }
-]
+        content: Station,
+      },
+    ],
+  },
+  {
+    key: shortid.generate(),
+    columnCount: 1,
+    columns: [
+      {
+        key: shortid.generate(),
+        type: 'text',
+        content: (
+          <>
+            <p>
+              One thing I personally found fascinating was queues at the
+              train stations. Almost every train stop in Tokyo had signs on the
+              floor indicating where to stand and form a line while waiting for
+              the train. Some stations also had arrows showing from which angle
+              the train door will face you while waiting in line (shown in the
+              picture above).
+            </p>
+          </>
+        ),
+      },
+    ],
+  },
+];
 
 export const day1 = [
   {
@@ -173,13 +231,13 @@ export const day1 = [
         key: shortid.generate(),
         type: 'image',
         content: Asakusabashi,
-      }
-     ],} ,
+      },
+    ],
+  },
   {
     key: shortid.generate(),
     columnCount: 1,
     columns: [
-      
       {
         key: shortid.generate(),
         type: 'text',
@@ -302,7 +360,7 @@ export const day1 = [
         key: shortid.generate(),
         type: 'image',
         content: AkiArc4,
-      }
+      },
     ],
   },
   {
