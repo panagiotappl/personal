@@ -50,10 +50,11 @@ export const day2 = [
               the friendliest and cosiest places we went during our journey. The
               waiters and staff very friendly and the place was calm and quiet.
               Whenever you were ready to order all you had to do was ring a
-              small bell that was placed on top of your table. The menu offered
-              a breakfast option of toasted bread with either beaten eggs or red
-              bean paste (a very common japanese cuisine ingredient for sweets).
-              To top that we also ordered the plate shown in the picture above.
+              small bell that was placed on top of your table (very common in
+              japanese restaurants). The menu offered a breakfast option of
+              toasted bread with either beaten eggs or red bean paste (a very
+              common japanese cuisine ingredient for sweets). To top that we
+              also ordered the plate shown in the picture above.
             </p>
           </>
         ),
@@ -81,11 +82,11 @@ export const day2 = [
         content: (
           <>
             <p>
-              One thing I personally found fascinating was queues at the
-              train stations. Almost every train stop in Tokyo had signs on the
-              floor indicating where to stand and form a line while waiting for
-              the train. Some stations also had arrows showing from which angle
-              the train door will face you while waiting in line (shown in the
+              One thing I personally found fascinating was queues at the train
+              stations. Almost every train stop in Tokyo had signs on the floor
+              indicating where to stand and form a line while waiting for the
+              train. Some stations also had arrows showing from which angle the
+              train door will face you while waiting in line (shown in the
               picture above).
             </p>
           </>
@@ -127,11 +128,11 @@ export const day1 = [
             <p>
               {' '}
               In Narita airport we got our{' '}
-              <strong>Japan Rail 14-day pass</strong> that we had actually
-              bought online some weeks prior to the trip. This pass is the best
-              way for tourists to travel around Japan as it covers all most
-              central rail lines (not the Metro line), the famous bullet trains
-              (Shinkansen) and many more!
+              <strong>Japan Rail 14-day pass</strong> that we had purchased
+              online some weeks prior to the trip. This pass is the best way for
+              tourists to travel around Japan as it covers most central rail
+              lines (not the Metro line), the famous bullet trains (Shinkansen)
+              and many more!
             </p>
             <p>
               After a huge waiting line for the JR passes in Narita airport we
@@ -170,12 +171,11 @@ export const day1 = [
               noodles with wasabi, miso soup, some salad and some fruits.
             </p>
             <p>
-              Japan is an island so most of the foods included some fish or
-              seafood. The flavour of japanse cuisine is very strong and
-              definitely different from the ones we are used to in the western
-              world. Many people are in love with the it but personally I
-              suffered a lot during my trip as seafood and fish are my list
-              favorite things to it.
+              Japan is an island so most of the dishes included fish or seafood.
+              The flavour of japanese cuisine is very strong and definitely
+              different from the ones we are used to in the western world. Many
+              people are in love with it but personally I suffered a lot during
+              my trip as seafood and fish are my list favorite things to eat.
             </p>
           </>
         ),
@@ -251,9 +251,9 @@ export const day1 = [
               quiet neighborhood without many important landmarks. Walking
               around the area you will find many cosy streets and bars mainly
               for locals. I personally loved this neighborhood and its vibe. We
-              were too scared to try any of the bars and restaurants in that
-              area as all the signs were in Japanese, which means they are not
-              very gaijin (foreigner) friendly.
+              were too scared to try any of the bars and restaurants there as
+              all the signs were in Japanese, which means they are not very
+              gaijin (foreigner) friendly.
             </p>
             <p>
               We stayed in MyStays hotel for 4 nights. MyStays is a big
