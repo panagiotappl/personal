@@ -79,35 +79,29 @@ export default function Header() {
           {isOpen && (
             <Transition transitionOnMount duration={2000} animation="fade down">
               <div>
-            <div className="mobile-menu">
-              <Button className="menu-button">
-                <Link className="menu-button-a" to="/">
-                  Home
-                </Link>
-              </Button>
-              <Button className="menu-button">
-                <Link className="menu-button-a"
-                  to="/projects"
-                >
-                  Projects
-                </Link>
-              </Button>
-              <Button className="menu-button">
-                <Link className="menu-button-a"
-                  to="/travels"
-                >
-                  Travels
-                </Link>
-              </Button>
-              <Button className="menu-button">
-                <Link className="menu-button-a"
-                  to="/about"
-                >
-                  About
-                </Link>
-              </Button>
-            </div>
-            </div>
+                <div className="mobile-menu">
+                  <Button className="menu-button">
+                    <Link className="menu-button-a" to="/">
+                      Home
+                    </Link>
+                  </Button>
+                  <Button className="menu-button">
+                    <Link className="menu-button-a" to="/projects">
+                      Projects
+                    </Link>
+                  </Button>
+                  <Button className="menu-button">
+                    <Link className="menu-button-a" to="/travels">
+                      Travels
+                    </Link>
+                  </Button>
+                  <Button className="menu-button">
+                    <Link className="menu-button-a" to="/about">
+                      About
+                    </Link>
+                  </Button>
+                </div>
+              </div>
             </Transition>
           )}
         </div>
