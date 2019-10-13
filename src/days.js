@@ -17,6 +17,14 @@ import Gundam2 from './images/japan/day1/gundam2.JPEG';
 
 import Station from './images/japan/day2/station.JPEG';
 import Breakfast from './images/japan/day2/breakfast.JPEG';
+import Yoyogi1 from './images/japan/day2/park1.jpg';
+import Yoyogi2 from './images/japan/day2/park2.jpg';
+import Shinjuku1 from './images/japan/day2/shinjuku1.jpg';
+import Shinjuku2 from './images/japan/day2/shinjuku2.jpg';
+import Sakuras from './images/japan/day2/sakuras.JPEG';
+import GoA from './images/japan/day2/goa.JPEG';
+import ShinjukuStreet from './images/japan/day2/shinjukuStreet.JPEG';
+import Bubble from './images/japan/day2/bubble.JPEG';
 
 export const day2 = [
   {
@@ -88,6 +96,158 @@ export const day2 = [
               train. Some stations also had arrows showing from which angle the
               train door will face you while waiting in line (shown in the
               picture above).
+            </p>
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    key: shortid.generate(),
+    columnCount: 2,
+    columns: [
+      {
+        key: shortid.generate(),
+        type: 'image',
+        content: Yoyogi1,
+      },
+      {
+        key: shortid.generate(),
+        type: 'image',
+        content: Yoyogi2,
+      },
+    ],
+  },
+  {
+    key: shortid.generate(),
+    columnCount: 1,
+    columns: [
+      {
+        key: shortid.generate(),
+        type: 'image',
+        content: Sakuras,
+      },
+    ],
+  },
+  {
+    key: shortid.generate(),
+    columnCount: 1,
+    columns: [
+      {
+        key: shortid.generate(),
+        type: 'text',
+        content: (
+          <>
+            <p>
+              Our first sightseeing stop of the day was Shinjuku Gyoen. One of
+              the prettiest parks in Tokyo is a must see especially during
+              Cherry Blossom season. We arrived in Tokyo at the end of the
+              season but there were still many trees in full bloom in the park.
+            </p>
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    key: shortid.generate(),
+    columnCount: 1,
+    columns: [
+      {
+        key: shortid.generate(),
+        type: 'image',
+        content: GoA,
+      },
+    ],
+  },
+  {
+    key: shortid.generate(),
+    columnCount: 1,
+    columns: [
+      {
+        key: shortid.generate(),
+        type: 'text',
+        content: (
+          <>
+            <p>
+              This was one of my favorite places in Tokyo. I also had an otaku
+              moment as I saw the famous setting from the <i>Garden of Words</i>{' '}
+              movie by the legendary <i>Makoto Shinkai</i>.
+            </p>
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    key: shortid.generate(),
+    columnCount: 2,
+    columns: [
+      {
+        key: shortid.generate(),
+        type: 'image',
+        content: Shinjuku1,
+      },
+      {
+        key: shortid.generate(),
+        type: 'image',
+        content: Shinjuku2,
+      },
+    ],
+  },
+  {
+    key: shortid.generate(),
+    columnCount: 1,
+    columns: [
+      {
+        key: shortid.generate(),
+        type: 'text',
+        content: (
+          <>
+            <p>
+              We existed Shinjuku Gyoen from the northern side and went straight
+              to Shinjuku. Shinjuku is one of the most special wards of Tokyo.
+              There you can find all shorts of different areas and types of
+              entertainment. From Kabukichou, Tokyo's red light district, to the
+              Tokyo Metropolitan Government building.
+            </p>
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    key: shortid.generate(),
+    columnCount: 2,
+    columns: [
+      {
+        key: shortid.generate(),
+        type: 'image',
+        content: Bubble,
+      },
+      {
+        key: shortid.generate(),
+        type: 'image',
+        content: ShinjukuStreet,
+      },
+    ],
+  },
+  {
+    key: shortid.generate(),
+    columnCount: 1,
+    columns: [
+      {
+        key: shortid.generate(),
+        type: 'text',
+        content: (
+          <>
+            <p>
+              I can't find enough words to describe Shinjuku properly. By
+              walking around you could see all the famous Robot restaurants,
+              which in reality didn't have any real robots but japanese people
+              dressed as robots, try bubble tea (shown in the picture above) and
+              simply get lost in all the colors of the neon signs and loud music
+              that was coming out from all those bizzare places.
             </p>
           </>
         ),

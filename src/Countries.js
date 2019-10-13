@@ -87,7 +87,7 @@ export function Japan(props) {
             />
             <InfoItem
               day="Day 2"
-              info="Yoyogi park & Harajuku & Samurai Musem & Shinjuku & Senso-ji Temple"
+              info="Shinjuku Gyoen & Samurai Musem & Shinjuku & Senso-ji Temple"
             />
             <InfoItem
               day="Day 3"
@@ -135,7 +135,7 @@ export function Japan(props) {
               <div className="day">
                 <div className="day-title">Day 2</div>
                 <div className="day-subtitle">
-                  Yoyogi park & Harajuku & Samurai Musem & Shinjuku & Senso-ji
+                  Shinjuku Gyoen & Samurai Musem & Shinjuku & Senso-ji
                   Temple
                 </div>
               </div>
