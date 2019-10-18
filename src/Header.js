@@ -1,20 +1,8 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React, { useState} from 'react';
 import { Button, Transition } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import {useWindowSize} from './hooks';
 import './Header.css';
-
-function useWindowSize() {
-  let [size, setSize] = useState([0, 0]);
-  useLayoutEffect(() => {
-    function updateSize() {
-      setSize([window.innerWidth, window.innerHeight]);
-    }
-    window.addEventListener('resize', updateSize);
-    updateSize();
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
-  return size;
-}
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,7 +65,6 @@ export default function Header() {
             />
           </div>
           {isOpen && (
-            <Transition transitionOnMount duration={2000} animation="fade down">
               <div>
                 <div className="mobile-menu">
                   <Button className="menu-button">
@@ -102,7 +89,6 @@ export default function Header() {
                   </Button>
                 </div>
               </div>
-            </Transition>
           )}
         </div>
       );
