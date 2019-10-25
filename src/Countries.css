@@ -3,8 +3,8 @@
 }
 
 .country-title {
-  font-size: 52px;
-  color: grey;
+  font-weight: normal !important;
+  font-size: 34px !important;
 }
 
 .dates {
@@ -14,15 +14,12 @@
   padding-top: 0.5rem !important;
 }
 
-.day {
-  background-color: #fff2f2;
-  padding: 1em 0.5em;
+.list {
+  font-size: 16px !important;
 }
 
 .day-title{
-  font-size: 26px;
-  padding-bottom: 0.5rem !important;
-  color: #f98ac5;
+  font-weight: normal !important;
 }
 
 .day-subtitle {
@@ -35,6 +32,10 @@
 .text {
   font-size: 18px;
   color: grey;
+}
+
+.info-grid {
+  margin-bottom: 5rem !important;
 }
 
 .info-column {

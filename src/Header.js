@@ -7,7 +7,7 @@ import './Header.css';
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const path = window.location.pathname;
-  let [width, height] = useWindowSize();
+  let [width] = useWindowSize();
   const isMobile = width <= 600;
 
   function renderHeader() {

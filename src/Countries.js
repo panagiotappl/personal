@@ -1,6 +1,7 @@
-import React, { createRef } from 'react';
-import { Grid, Image, Ref, Sticky } from 'semantic-ui-react';
+import React from 'react';
+import { Grid, Image, Header, List } from 'semantic-ui-react';
 import { day1, day2 } from './days';
+import { japanSummary } from './summary';
 import MyBreadcrumbs from './Breadcrumbs';
 import './Countries.css';
 
@@ -22,7 +23,7 @@ function renderColumn({ type, content, key }) {
 
 function InformationGrid({ day }) {
   return (
-    <Grid stackable>
+    <Grid stackable className="info-grid">
       {day.map(row => {
         return (
           <Grid.Row key={row.key} columns={row.columnCount}>
@@ -36,118 +37,66 @@ function InformationGrid({ day }) {
   );
 }
 
-// function InfoItem({ day, info }) {
-//   return (
-//     <div>
-//       <div className="info-column-day">{day}</div>
-//       <div className="info-column-text"> {info}</div>
-//     </div>
-//   );
-// }
+function SummaryList({ summary }) {
+  return (
+    <List celled className="list">
+      {summary.map(s => (
+        <List.Item>
+          <List.Icon name="marker" />
+          {s}
+        </List.Item>
+      ))}
+    </List>
+  );
+}
+
 export function Japan(props) {
-  // const contextRef = createRef();
   return (
     <div className="country-container">
       <Grid container>
         <Grid.Row>
           <MyBreadcrumbs path={props.location.pathname} />
         </Grid.Row>
-        <Grid.Row columns={2}>
-          <Grid.Column>
-            <div className="country-title">Japan</div>
+        <Grid.Row columns={1}>
+          <Grid.Column width={12}>
+            <Header size="huge" className="country-title">
+              Japan - Two Week Iterinary{' '}
+              <Header.Subheader as="h2">19 Apr - 5 May</Header.Subheader>
+            </Header>
           </Grid.Column>
-          <Grid.Column></Grid.Column>
         </Grid.Row>
-        <Grid.Row className="dates">19 Apr - 5 May</Grid.Row>
       </Grid>
       <Grid container stackable>
         <Grid.Row columns={2}>
+          <Grid.Column width={10}>
+            <SummaryList summary={japanSummary} />
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row columns={2}>
           <Grid.Column width={12}>
-            {/* <Sticky context={contextRef}> */}
-              <div className="day">
-                <div className="day-title">Day 1</div>
-                <div className="day-subtitle">
-                  Flight to Narita airport & Asakusabashi & Akihabara
-                </div>
-              </div>
-            {/* </Sticky> */}
+            <h2 className="day-title">
+              1. Flight to Narita airport & Asakusabashi & Akihabara
+            </h2>
           </Grid.Column>
           <Grid.Column width={4}></Grid.Column>
         </Grid.Row>
         <Grid.Row columns={2}>
           <Grid.Column width={12}>
-            {/* <Ref innerRef={contextRef}> */}
-              <InformationGrid day={day1} />
-            {/* </Ref> */}
+            <InformationGrid day={day1} />
           </Grid.Column>
-          <Grid.Column className="info-column" width={4}>
-            {/* <InfoItem
-              day="Day 1"
-              info="Flight to Narita airport & Asakusabashi & Akihabara"
-            />
-            <InfoItem
-              day="Day 2"
-              info="Shinjuku Gyoen & Samurai Musem & Shinjuku & Senso-ji Temple"
-            />
-            <InfoItem
-              day="Day 3"
-              info="Odabara & TheLab borderless & Ginza Street & Golden Gai"
-            />
-            <InfoItem
-              day="Day 4"
-              info="The East Gardens of The Imperial Palace & Meiji Jingu & Tokyo Metropolitan & Shibuya Crossing"
-            />
-            <InfoItem day="Day 5" info="Hakone & Traditional Japanese dinner" />
-            <InfoItem
-              day="Day 6 & Day 7"
-              info="JR Hida limited express train & Takayama"
-            />
-            <InfoItem day="Day 8 & Day 9" info="Shiragawa-go & Kanazawa" />
-            <InfoItem
-              day="Day 10"
-              info="Tenryu-ji Temple & Arashiyama forest"
-            />
-            <InfoItem
-              day="Day 11"
-              info="Kinkaku-ji & Kyoto Districts & Kiyomizu-dera"
-            />
-            <InfoItem
-              day="Day 12"
-              info="Fushimi Inari & Drink at bar in Kyoto"
-            />
-            <InfoItem
-              day="Day 13"
-              info="Trip to Koyasan & Meditation with monks & Tour in Koyasan semetary"
-            />
-            <InfoItem
-              day="Day 14"
-              info="Morning Bhudist rituals & Trip back to Tokyo"
-            />
-            <InfoItem
-              day="Day 15"
-              info="Akihabara & Hair Saloon &  Takeshita Street & Nakano"
-            /> */}
-          </Grid.Column>
+          <Grid.Column className="info-column" width={4}></Grid.Column>
         </Grid.Row>
         <Grid.Row columns={2}>
           <Grid.Column width={12}>
-            {/* <Sticky context={contextRef2}> */}
-              <div className="day">
-                <div className="day-title">Day 2</div>
-                <div className="day-subtitle">
-                  Shinjuku Gyoen & Samurai Musem & Shinjuku & Senso-ji
-                  Temple
-                </div>
-              </div>
-            {/* </Sticky> */}
+            <h2 className="day-title">
+              2. Shinjuku Gyoen & Samurai Musem & Shinjuku & Senso-ji Temple
+            </h2>
           </Grid.Column>
           <Grid.Column width={4}></Grid.Column>
         </Grid.Row>
         <Grid.Row columns={2}>
           <Grid.Column width={12}>
-            {/* <Ref innerRef={contextRef2}> */}
-              <InformationGrid day={day2} />
-            {/* </Ref> */}
+            <InformationGrid day={day2} />
           </Grid.Column>
         </Grid.Row>
       </Grid>
