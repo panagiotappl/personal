@@ -2,9 +2,10 @@
   padding: 2em 0em;
 }
 
-.country-title {
-  font-weight: normal !important;
-  font-size: 34px !important;
+.ui.huge.header.country-title {
+  font-weight: normal;
+  font-size: 34px;
+  padding-bottom: 0.5em;
 }
 
 .dates {

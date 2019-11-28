@@ -1,7 +1,5 @@
 import React from 'react';
-import { Grid, Image, Header, List } from 'semantic-ui-react';
-import { japanDays } from './days';
-import { japanSummary } from './summary';
+import { Container, Grid, Image, Header, List } from 'semantic-ui-react';
 import MyBreadcrumbs from '../Breadcrumbs';
 import './Countries.css';
 
@@ -39,7 +37,7 @@ function InformationGrid({ day }) {
 
 function SummaryList({ summary }) {
   return (
-    <List celled className="list">
+    <List className="list">
       {summary.map(s => (
         <List.Item key={s}>
           <List.Icon name="marker" />
@@ -52,62 +50,41 @@ function SummaryList({ summary }) {
 
 function CountryTitle({ path, title, subTitle }) {
   return (
-    <Grid container>
-      <Grid.Row>
-        <MyBreadcrumbs path={path} />
-      </Grid.Row>
-      <Grid.Row columns={1}>
-        <Grid.Column width={12}>
-          <Header size="huge" className="country-title">
-            {title}
-            <Header.Subheader as="h2">{subTitle}</Header.Subheader>
-          </Header>
-        </Grid.Column>
-      </Grid.Row>
-    </Grid>
+    <Container text>
+      <MyBreadcrumbs path={path} />
+      <Header size="huge" className="country-title">
+        {title}
+        <Header.Subheader as="h2">{subTitle}</Header.Subheader>
+      </Header>
+    </Container>
   );
 }
 
 function CountrySummary({ summary }) {
-  return (
-    <Grid.Row columns={2}>
-      <Grid.Column width={10}>
-        <SummaryList summary={summary} />
-      </Grid.Column>
-    </Grid.Row>
-  );
+  return <SummaryList summary={summary} />;
 }
 
 function CountryDay({ day }) {
   return (
     <>
-      <Grid.Row columns={2}>
-        <Grid.Column width={12}>
-          <h2 className="day-title">{day.title}</h2>
-        </Grid.Column>
-        <Grid.Column width={4}></Grid.Column>
-      </Grid.Row>
-      <Grid.Row columns={2}>
-        <Grid.Column width={12}>
-          <InformationGrid day={day.content} />
-        </Grid.Column>
-      </Grid.Row>
+      <h2 className="day-title">{day.title}</h2>
+      <InformationGrid day={day.content} />
     </>
   );
 }
 
 function CountryBody({ summary, days }) {
   return (
-    <Grid container stackable>
+    <Container text>
       <CountrySummary summary={summary} />
       {days.map(day => (
         <CountryDay key={day.title} day={day} />
       ))}
-    </Grid>
+    </Container>
   );
 }
 
-export function Country({title, subTitle, summary, days, location}) {
+export function Country({ title, subTitle, summary, days, location }) {
   return (
     <div className="country-container">
       <CountryTitle

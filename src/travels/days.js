@@ -549,5 +549,5 @@ export const japanDays = [
   {
     title: '2. Shinjuku Gyoen & Samurai Musem & Shinjuku & Senso-ji Temple',
     content: day2,
-  },
+  }
 ];
