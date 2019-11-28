@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Breadcrumb } from 'semantic-ui-react';
 
 function capitalize(str) {
@@ -16,7 +16,7 @@ function generateSections(path) {
       link: true,
       active: false,
       hasDivider: true,
-      linkTo: '/'
+      linkTo: '/',
     },
   ];
 
@@ -46,20 +46,15 @@ export default function MyBreadcrumbs(props) {
   const sections = generateSections(props.path);
 
   return (
-    <Breadcrumb icon="right angle">
+    <Breadcrumb>
       {sections.map(section => (
-        <>
-          <Breadcrumb.Section
-            key={section.key}
-            link={section.link}
-            active={section.active}
-          >
-            {section.link && 
-              <Link to={section.linkTo} >{section.content}</Link>}
-              {!section.link && section.content}
+        <span key={section.key}>
+          <Breadcrumb.Section link={section.link} active={section.active}>
+            {section.link && <Link to={section.linkTo}>{section.content}</Link>}
+            {!section.link && section.content}
           </Breadcrumb.Section>
           {section.hasDivider && <Breadcrumb.Divider />}
-        </>
+        </span>
       ))}
     </Breadcrumb>
   );

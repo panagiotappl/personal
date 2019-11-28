@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Image, Header, List } from 'semantic-ui-react';
-import { day1, day2 } from './days';
+import { japanDays } from './days';
 import { japanSummary } from './summary';
 import MyBreadcrumbs from './Breadcrumbs';
 import './Countries.css';
@@ -41,7 +41,7 @@ function SummaryList({ summary }) {
   return (
     <List celled className="list">
       {summary.map(s => (
-        <List.Item>
+        <List.Item key={s}>
           <List.Icon name="marker" />
           {s}
         </List.Item>
@@ -50,56 +50,72 @@ function SummaryList({ summary }) {
   );
 }
 
-export function Japan(props) {
+function CountryTitle({ path, title, subTitle }) {
+  return (
+    <Grid container>
+      <Grid.Row>
+        <MyBreadcrumbs path={path} />
+      </Grid.Row>
+      <Grid.Row columns={1}>
+        <Grid.Column width={12}>
+          <Header size="huge" className="country-title">
+            {title}
+            <Header.Subheader as="h2">{subTitle}</Header.Subheader>
+          </Header>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
+  );
+}
+
+function CountrySummary({ summary }) {
+  return (
+    <Grid.Row columns={2}>
+      <Grid.Column width={10}>
+        <SummaryList summary={summary} />
+      </Grid.Column>
+    </Grid.Row>
+  );
+}
+
+function CountryDay({ day }) {
+  return (
+    <>
+      <Grid.Row columns={2}>
+        <Grid.Column width={12}>
+          <h2 className="day-title">{day.title}</h2>
+        </Grid.Column>
+        <Grid.Column width={4}></Grid.Column>
+      </Grid.Row>
+      <Grid.Row columns={2}>
+        <Grid.Column width={12}>
+          <InformationGrid day={day.content} />
+        </Grid.Column>
+      </Grid.Row>
+    </>
+  );
+}
+
+function CountryBody({ summary, days }) {
+  return (
+    <Grid container stackable>
+      <CountrySummary summary={summary} />
+      {days.map(day => (
+        <CountryDay key={day.title} day={day} />
+      ))}
+    </Grid>
+  );
+}
+
+export function Country({title, subTitle, summary, days, location}) {
   return (
     <div className="country-container">
-      <Grid container>
-        <Grid.Row>
-          <MyBreadcrumbs path={props.location.pathname} />
-        </Grid.Row>
-        <Grid.Row columns={1}>
-          <Grid.Column width={12}>
-            <Header size="huge" className="country-title">
-              Japan - Two Week Iterinary{' '}
-              <Header.Subheader as="h2">19 Apr - 5 May</Header.Subheader>
-            </Header>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-      <Grid container stackable>
-        <Grid.Row columns={2}>
-          <Grid.Column width={10}>
-            <SummaryList summary={japanSummary} />
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row columns={2}>
-          <Grid.Column width={12}>
-            <h2 className="day-title">
-              1. Flight to Narita airport & Asakusabashi & Akihabara
-            </h2>
-          </Grid.Column>
-          <Grid.Column width={4}></Grid.Column>
-        </Grid.Row>
-        <Grid.Row columns={2}>
-          <Grid.Column width={12}>
-            <InformationGrid day={day1} />
-          </Grid.Column>
-          <Grid.Column className="info-column" width={4}></Grid.Column>
-        </Grid.Row>
-        <Grid.Row columns={2}>
-          <Grid.Column width={12}>
-            <h2 className="day-title">
-              2. Shinjuku Gyoen & Samurai Musem & Shinjuku & Senso-ji Temple
-            </h2>
-          </Grid.Column>
-          <Grid.Column width={4}></Grid.Column>
-        </Grid.Row>
-        <Grid.Row columns={2}>
-          <Grid.Column width={12}>
-            <InformationGrid day={day2} />
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+      <CountryTitle
+        path={location.pathname}
+        title={title}
+        subTitle={subTitle}
+      />
+      <CountryBody summary={summary} days={days} />
     </div>
   );
 }

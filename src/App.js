@@ -3,10 +3,21 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import Header from './Header';
 import Travels from './Travels';
-import {Japan} from './Countries';
+import { Country } from './Countries';
 import About from './About';
 import UnderContrustction from './UnderConstruction';
+import { japanSummary } from './summary';
+import { japanDays } from './days';
 
+const Japan = ({location}) => (
+  <Country
+    title="Japan - Two Week Iterinary"
+    subTitle="19 Apr - 5 May"
+    summary={japanSummary}
+    days={japanDays}
+    location={location}
+  />
+);
 
 export default function App() {
   return (

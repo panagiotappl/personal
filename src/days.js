@@ -540,3 +540,14 @@ export const day1 = [
     ],
   },
 ];
+
+export const japanDays = [
+  {
+    title: '1. Flight to Narita airport & Asakusabashi & Akihabara',
+    content: day1,
+  },
+  {
+    title: '2. Shinjuku Gyoen & Samurai Musem & Shinjuku & Senso-ji Temple',
+    content: day2,
+  },
+];

@@ -1,7 +1,7 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import { Button, Transition } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import {useWindowSize} from './hooks';
+import { useWindowSize } from './hooks';
 import './Header.css';
 
 export default function Header() {
@@ -32,6 +32,16 @@ export default function Header() {
             </Transition>
             <Transition transitionOnMount duration={2000}>
               <Link
+                to="/about"
+                className={
+                  'nav-header-item' + (path === '/about' ? ' selected' : '')
+                }
+              >
+                About Me
+              </Link>
+            </Transition>
+            <Transition transitionOnMount duration={2000}>
+              <Link
                 to="/travels"
                 className={
                   'nav-header-item' +
@@ -39,16 +49,6 @@ export default function Header() {
                 }
               >
                 Travels
-              </Link>
-            </Transition>
-            <Transition transitionOnMount duration={2000}>
-              <Link
-                to="/about"
-                className={
-                  'nav-header-item' + (path === '/about' ? ' selected' : '')
-                }
-              >
-                About
               </Link>
             </Transition>
           </div>
@@ -65,30 +65,30 @@ export default function Header() {
             />
           </div>
           {isOpen && (
-              <div>
-                <div className="mobile-menu">
-                  <Button className="menu-button">
-                    <Link className="menu-button-a" to="/">
-                      Home
-                    </Link>
-                  </Button>
-                  <Button className="menu-button">
-                    <Link className="menu-button-a" to="/projects">
-                      Projects
-                    </Link>
-                  </Button>
-                  <Button className="menu-button">
-                    <Link className="menu-button-a" to="/travels">
-                      Travels
-                    </Link>
-                  </Button>
-                  <Button className="menu-button">
-                    <Link className="menu-button-a" to="/about">
-                      About
-                    </Link>
-                  </Button>
-                </div>
+            <div>
+              <div className="mobile-menu">
+                <Button className="menu-button">
+                  <Link className="menu-button-a" to="/">
+                    Home
+                  </Link>
+                </Button>
+                <Button className="menu-button">
+                  <Link className="menu-button-a" to="/projects">
+                    Projects
+                  </Link>
+                </Button>
+                <Button className="menu-button">
+                  <Link className="menu-button-a" to="/travels">
+                    Travels
+                  </Link>
+                </Button>
+                <Button className="menu-button">
+                  <Link className="menu-button-a" to="/about">
+                    About
+                  </Link>
+                </Button>
               </div>
+            </div>
           )}
         </div>
       );
