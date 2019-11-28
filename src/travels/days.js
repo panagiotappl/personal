@@ -205,11 +205,12 @@ export const day2 = [
         content: (
           <>
             <p>
-              We existed Shinjuku Gyoen from the northern side and went straight
+              We exited Shinjuku Gyoen from the northern side and went straight
               to Shinjuku. Shinjuku is one of the most special wards of Tokyo.
               There you can find all shorts of different areas and types of
               entertainment. From Kabukichou, Tokyo's red light district, to the
-              Tokyo Metropolitan Government building.
+              Tokyo Metropolitan Government building that has one of the best,
+              and also free, views of Tokyo from above.
             </p>
           </>
         ),
@@ -549,5 +550,5 @@ export const japanDays = [
   {
     title: '2. Shinjuku Gyoen & Samurai Musem & Shinjuku & Senso-ji Temple',
     content: day2,
-  }
+  },
 ];
