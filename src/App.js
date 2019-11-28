@@ -2,12 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import Header from './Header';
-import Travels from './Travels';
-import { Country } from './Countries';
-import About from './About';
+import Travels from './travels/Travels';
+import { Country } from './travels/Countries';
+import About from './about/About';
 import UnderContrustction from './UnderConstruction';
-import { japanSummary } from './summary';
-import { japanDays } from './days';
+import { japanSummary } from './travels/summary';
+import { japanDays } from './travels/days';
 
 const Japan = ({location}) => (
   <Country

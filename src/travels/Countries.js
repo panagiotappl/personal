@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Image, Header, List } from 'semantic-ui-react';
 import { japanDays } from './days';
 import { japanSummary } from './summary';
-import MyBreadcrumbs from './Breadcrumbs';
+import MyBreadcrumbs from '../Breadcrumbs';
 import './Countries.css';
 
 function renderColumn({ type, content, key }) {

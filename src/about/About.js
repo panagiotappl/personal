@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Icon, Image } from 'semantic-ui-react';
-import {useWindowSize} from './hooks';
-import Avatar from './images/avatar.png';
+import {useWindowSize} from '../hooks';
+import Avatar from '../images/avatar.png';
 import './About.css';
 
 export default function About() {

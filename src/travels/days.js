@@ -1,30 +1,30 @@
 import React from 'react';
 import shortid from 'shortid';
 import { Image } from 'semantic-ui-react';
-import Airplane from './images/japan/day1/airplane.JPEG';
-import AirplaneFood from './images/japan/day1/airplane_food.JPEG';
-import Vending1 from './images/japan/day1/vending1.JPEG';
-import Vending2 from './images/japan/day1/vending2.JPEG';
-import Asakusabashi from './images/japan/day1/asakusabashi.JPEG';
-import Asakusabashi1 from './images/japan/day1/asakusabashi1.JPEG';
-import AkiBuild3 from './images/japan/day1/akibuilding3.JPEG';
-import AkiArc1 from './images/japan/day1/akiarc1.JPEG';
-import AkiArc2 from './images/japan/day1/akiarc2.JPEG';
-import AkiArc3 from './images/japan/day1/akiarc3.JPEG';
-import AkiArc4 from './images/japan/day1/akiarc4.JPEG';
-import Gundam from './images/japan/day1/gundam.JPEG';
-import Gundam2 from './images/japan/day1/gundam2.JPEG';
+import Airplane from '../images/japan/day1/airplane.JPEG';
+import AirplaneFood from '../images/japan/day1/airplane_food.JPEG';
+import Vending1 from '../images/japan/day1/vending1.JPEG';
+import Vending2 from '../images/japan/day1/vending2.JPEG';
+import Asakusabashi from '../images/japan/day1/asakusabashi.JPEG';
+import Asakusabashi1 from '../images/japan/day1/asakusabashi1.JPEG';
+import AkiBuild3 from '../images/japan/day1/akibuilding3.JPEG';
+import AkiArc1 from '../images/japan/day1/akiarc1.JPEG';
+import AkiArc2 from '../images/japan/day1/akiarc2.JPEG';
+import AkiArc3 from '../images/japan/day1/akiarc3.JPEG';
+import AkiArc4 from '../images/japan/day1/akiarc4.JPEG';
+import Gundam from '../images/japan/day1/gundam.JPEG';
+import Gundam2 from '../images/japan/day1/gundam2.JPEG';
 
-import Station from './images/japan/day2/station.JPEG';
-import Breakfast from './images/japan/day2/breakfast.JPEG';
-import Yoyogi1 from './images/japan/day2/park1.jpg';
-import Yoyogi2 from './images/japan/day2/park2.jpg';
-import Shinjuku1 from './images/japan/day2/shinjuku1.jpg';
-import Shinjuku2 from './images/japan/day2/shinjuku2.jpg';
-import Sakuras from './images/japan/day2/sakuras.JPEG';
-import GoA from './images/japan/day2/goa.JPEG';
-import ShinjukuStreet from './images/japan/day2/shinjukuStreet.JPEG';
-import Bubble from './images/japan/day2/bubble.JPEG';
+import Station from '../images/japan/day2/station.JPEG';
+import Breakfast from '../images/japan/day2/breakfast.JPEG';
+import Yoyogi1 from '../images/japan/day2/park1.jpg';
+import Yoyogi2 from '../images/japan/day2/park2.jpg';
+import Shinjuku1 from '../images/japan/day2/shinjuku1.jpg';
+import Shinjuku2 from '../images/japan/day2/shinjuku2.jpg';
+import Sakuras from '../images/japan/day2/sakuras.JPEG';
+import GoA from '../images/japan/day2/goa.JPEG';
+import ShinjukuStreet from '../images/japan/day2/shinjukuStreet.JPEG';
+import Bubble from '../images/japan/day2/bubble.JPEG';
 
 export const day2 = [
   {
