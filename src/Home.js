@@ -11,11 +11,11 @@ export default function Home() {
           <Link to="/projects" className="navigation-button">Projects</Link>
         </Transition>
         <Transition transitionOnMount duration={2000}>
-          <Link to="/travels" className="navigation-button">Travels</Link>
-        </Transition>
-        <Transition transitionOnMount duration={2000}>
           <Link to="/about" className="navigation-button">About</Link>
         </Transition>
+        <Transition transitionOnMount duration={2000}>
+          <Link to="/travels" className="navigation-button">Travels</Link>
+        </Transition>  
       </header>
     </div>
   );

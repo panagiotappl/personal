@@ -37,7 +37,7 @@ export default function Header() {
                   'nav-header-item' + (path === '/about' ? ' selected' : '')
                 }
               >
-                About Me
+                About
               </Link>
             </Transition>
             <Transition transitionOnMount duration={2000}>
@@ -78,13 +78,13 @@ export default function Header() {
                   </Link>
                 </Button>
                 <Button className="menu-button">
-                  <Link className="menu-button-a" to="/travels">
-                    Travels
+                  <Link className="menu-button-a" to="/about">
+                    About
                   </Link>
                 </Button>
                 <Button className="menu-button">
-                  <Link className="menu-button-a" to="/about">
-                    About
+                  <Link className="menu-button-a" to="/travels">
+                    Travels
                   </Link>
                 </Button>
               </div>

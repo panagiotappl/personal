@@ -12,15 +12,19 @@
 
 .travels-item {
   display: inline-block;
-  background-color: transparent;
   cursor: pointer;
   color: grey;
-  padding: 2em;
+  padding: 4em 2em;
   font-size: 24px;
+  border: 0.5px solid #bcbdbd;
+  margin: 0.5em;
+
 }
 
 .travels-item:hover {
   color: black;
+  border: 0.5px solid grey;
+  background-image: url('../images/japan/japan.png');
 }
 
 .focused-country {
