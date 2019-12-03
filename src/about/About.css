@@ -1,9 +1,38 @@
 .about-me {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2em;
+}
+
+.ui.container {
+  max-width: 400px !important;
+}
+
+.me-image {
+  align-self: center;
+  padding: 1em;
+}
+
+.me-text {
+  padding: 1em;
+  text-align: center;
+  display: flex;
   flex-direction: column;
 }
 
 .resume-section {
   color: #29c5e8;
+}
+
+.name-header {
+  color: grey !important;
+}
+
+.name-subheader {
+  color: #f98ac5 !important;
+}
+
+.socials {
+  text-align: center;
 }
