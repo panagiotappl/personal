@@ -17,7 +17,7 @@ export default function About() {
           <Header as="h1" className="name-header">
             Panagiota Poulopoulou
             <Header.Subheader className="name-subheader">
-              Software Developer @ Cern
+              Software Developer @ CERN
             </Header.Subheader>
           </Header>
           <span>
